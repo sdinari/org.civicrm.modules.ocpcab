@@ -1,6 +1,6 @@
-//CRM/Contact/Form/Contact.tpl
 {literal}
 <script type="text/javascript">
+ //CRM/Contact/Form/Contact.tpl
  //alert("Hello! I am an alert box!!");
    
    //hide menu tag
