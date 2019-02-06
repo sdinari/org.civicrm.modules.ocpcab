@@ -2,14 +2,15 @@
 
 ![Screenshot](/images/screenshot.png)
 
-(*FIXME: In one or two paragraphs, describe what the extension does and why one would download it. *)
+this is a civicrm extension that modify the standard civicrm behavior :
+- contact form (hiding some fields + adding others)
 
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 ## Requirements
 
 * PHP v5.6+
-* CiviCRM (*FIXME: Version number*)
+* CiviCRM (*1.0: Version number*)
 
 ## Installation (Web UI)
 
@@ -22,7 +23,7 @@ install it with the command-line tool [cv](https://github.com/civicrm/cv).
 
 ```bash
 cd <extension-dir>
-cv dl org.civicrm.modules.ocpcab@https://github.com/FIXME/org.civicrm.modules.ocpcab/archive/master.zip
+cv dl org.civicrm.modules.ocpcab@https://github.com/sdinari/org.civicrm.modules.ocpcab/archive/master.zip
 ```
 
 ## Installation (CLI, Git)
@@ -31,14 +32,14 @@ Sysadmins and developers may clone the [Git](https://en.wikipedia.org/wiki/Git) 
 install it with the command-line tool [cv](https://github.com/civicrm/cv).
 
 ```bash
-git clone https://github.com/FIXME/org.civicrm.modules.ocpcab.git
+git clone https://github.com/sdinari/org.civicrm.modules.ocpcab.git
 cv en ocpcab
 ```
 
 ## Usage
 
-(* FIXME: Where would a new user navigate to get started? What changes would they see? *)
+(* civicrm extension install doc *)
 
 ## Known Issues
 
-(* FIXME *)
+(**)
