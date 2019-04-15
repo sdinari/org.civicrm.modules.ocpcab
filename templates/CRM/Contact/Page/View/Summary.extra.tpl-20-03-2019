@@ -1,6 +1,6 @@
 {literal}
 <script type="text/javascript">
- //CRM/Contact/View/Summary.tpl
+ //CRM/Contact/Form/Contact.tpl
    //alert("Hello! I am an alert box!!");
    
    //hide menu tag
@@ -116,41 +116,13 @@
    //#crm-contactname-content > div > div.crm-summary-display_name
    
    //** moving short bio elements
-   jobt_sel  =  '#crm-contactinfo-content > div > div:nth-child(3)';
+   source_sel  =  '#crm-contactinfo-content > div > div:nth-child(5)';
    nationality_sel ='#custom-set-content-9 > div > div:nth-child(7)';                 
    nationality = cj(nationality_sel).html();
    nationality = nationality.replace(/<td class="label"\>([\w\<\s="\-\>.*\/]*)(<\/td>)([\W]*)(<td class="html-adjust">)([\W\w]*)/gm,'<td class="html-adjust" colspan="3"">$1<br>$5');
-   //nationality = nationality.replace('crm-custom-data','crm-contact_source')';
-   nn = '<div class="crm-summary-row">'+nationality+'</div>' ;
-   cj(jobt_sel).after(nn);
-   cj(nationality_sel).remove();
-   //**university
-   university_sel ='#custom-set-content-9 > div > div:nth-child(8)';
-   university = cj(university_sel).html();
-   university = university.replace(/<td class="label"\>([\w\<\s="\-\>.*\/]*)(<\/td>)([\W]*)(<td class="html-adjust">)([\W\w]*)/gm,'<td class="html-adjust" colspan="3"">$1<br>$5');
-   //university = nationality.replace('crm-custom-data','crm-contact_source')';
-   nn = '<div class="crm-summary-row">'+university+'</div>' ;
-   cj(jobt_sel).after(nn);
-   cj(university_sel).remove();   
-   //**institution
-   
-   institution_sel ='#custom-set-content-9 > div > div:nth-child(8)';
-   institution = cj(institution_sel).html();
-   institution = institution.replace(/<td class="label"\>([\w\<\s="\-\>.*\/]*)(<\/td>)([\W]*)(<td class="html-adjust">)([\W\w]*)/gm,'<td class="html-adjust" colspan="3"">$1<br>$5');
-   //institution = institution.replace('crm-custom-data','crm-contact_source')';
-   nn = '<div class="crm-summary-row">'+institution+'</div>' ;
-   cj(jobt_sel).after(nn);
-   cj(institution_sel).remove();  
-   
-   //**type   
-   type_sel ='#custom-set-content-9 > div > div:nth-child(7)';
-   type = cj(type_sel).html();
-   type = type.replace(/<td class="label"\>([\w\<\s="\-\>.*\/]*)(<\/td>)([\W]*)(<td class="html-adjust">)([\W\w]*)/gm,'<td class="html-adjust" colspan="3"">$1<br>$5');
-   //type = type.replace('crm-custom-data','crm-contact_source')';
-   nn = '<div class="crm-summary-row">'+type+'</div>' ;
-   cj(jobt_sel).after(nn);
-   cj(type_sel).remove();     
-
+   //alert(nationality); 
+   cj('#contactDetails > div.crm-section.contact_basic_information-section > table > tbody > tr:nth-child(1)').before('<tr>'+nationality+'</tr>');
+   cj(nationality_sel).hide();
    
       
 

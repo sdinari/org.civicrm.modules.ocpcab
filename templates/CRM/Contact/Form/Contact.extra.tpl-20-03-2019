@@ -36,10 +36,10 @@
    cj('#contactDetails > table.crm-section.contact_source-section.form-layout-compressed > tbody > tr > td:nth-child(2)').remove();
    
    //Address Location Type
-   cj('#Address_Block_1 > table > tbody > tr:nth-child(1)').hide();
+   //:::cj('#Address_Block_1 > table > tbody > tr:nth-child(1)').remove();
    //Supplemental Address 2 / Supplemental Address 3
-   cj('#address_table_1 > tbody > tr:nth-child(3)').hide();
-   cj('#address_table_1 > tbody > tr:nth-child(4)').hide();
+   //:::cj('#address_table_1 > tbody > tr:nth-child(3)').hide();
+   //:::cj('#address_table_1 > tbody > tr:nth-child(4)').hide();
    //County
    cj('#address_table_1 > tbody > tr:nth-child(7)').hide();
    //Greeting : emil,postal ,addresse
@@ -143,7 +143,7 @@
    cj('#contactDetails > table.crm-section.contact_source-section.form-layout-compressed > tbody > tr > td:nth-child(2)').hide();
 
    //Address Location Type
-   cj('#Address_Block_1 > table > tbody > tr:nth-child(1)').hide();
+   cj('#Address_Block_1 > table > tbody > tr:nth-child(1)').remove();
    //Supplemental Address 2 / Supplemental Address 3
    cj('#address_table_1 > tbody > tr:nth-child(3)').hide();
    cj('#address_table_1 > tbody > tr:nth-child(4)').hide();
@@ -156,14 +156,14 @@
    cj('#tagGroup > table > tbody > tr > td:nth-child(1)').hide();      
    //123*****
    /////
-   //moving nationality from shortbio to top page  (update  page)
+   //copy nationality from shortbio to top page  (update  page)
                 
    nationality_sel ='#customData9 > table > tbody > tr.custom_field-row[class*="custom_44"]';                 
    nationality = cj(nationality_sel).html();
    nationality = nationality.replace(/<td class="label"\>([\w\<\s="\-\>.*\/]*)(<\/td>)([\W]*)(<td class="html-adjust">)([\W\w]*)/gm,'<td class="html-adjust" colspan="3"">$1<br>$5');
    //alert(nationality); 
    cj('#contactDetails > div.crm-section.contact_basic_information-section > table > tbody > tr:nth-child(1)').before('<tr>'+nationality+'</tr>');
-   cj(nationality_sel).remove();
+   cj(nationality_sel).hide();
 
    //copy type from shortbio to top page 
    type_sel = '#customData9 > table > tbody > tr.custom_field-row[class*="custom_48"]' ;          
@@ -175,10 +175,10 @@
    //type = type.replace('<td class="html-adjust">','<td class="html-adjust" colspan="3"> <label for="custom_48_-67">Type</label><br>');
    type = type.replace(/<td class="label"\>([\w\<\s="\-\>.*\/]*)(<\/td>)([\W]*)(<td class="html-adjust">)([\W\w]*)/gm,'<td class="html-adjust">$1<br>$5');
    cj('#contactDetails > div.crm-section.contact_basic_information-section > table > tbody > tr:nth-child(1)').before('<tr>'+type+'</tr>');
-   cj(type_sel).remove();
+   cj(type_sel).hide();
 
 
-   // move gender from demographic to top page
+   // copy gender from demographic to top page
    gender = cj('#demographics > div:nth-child(1)').html();
    gender = gender.replace('<span class="label"><label>Gender</label></span>','<label for="lbGender">Gender</label><br>');
    cj('#contactDetails > div.crm-section.contact_basic_information-section > table > tbody > tr:nth-child(1)').before('<td colspan="3">'+gender+'</td>');
@@ -189,7 +189,7 @@
    university = cj(university_sel).html();
    university = university.replace(/<td class="label"\>([\w\<\s="\-\>.*\/]*)(<\/td>)([\W]*)(<td class="html-adjust">)([\W\w]*)/gm,'<td class="html-adjust">$1<br>$5');
    cj('#contactDetails > div.crm-section.contact_basic_information-section > table > tbody > tr:nth-child(5)').after('<tr>'+university+'</tr>');
-   cj(university_sel).remove();   
+   cj(university_sel).hide();   
 
    // shortbio Institution moving
   institution_sel = '#customData9 > table > tbody > tr.custom_field-row[class*="custom_50"]' ;
@@ -198,7 +198,7 @@
   institution = institution.replace(/<td class="label"\>([\w\<\s="\-\>.*\/]*)(<\/td>)([\W]*)(<td class="html-adjust">)([\W\w]*)/gm,'<td class="html-adjust">$1<br>$5');
   cj('#contactDetails > div.crm-section.contact_basic_information-section > table > tbody > tr:nth-child(6)').after('<tr>'+institution+'</tr>');
   
-  cj(institution_sel).remove();   
+  cj(institution_sel).hide();   
      
    //****************************** 
        
